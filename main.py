@@ -24,14 +24,6 @@ async def on_ready():
   except Exception as e:
     print(e)
 
-@client.tree.command(name="miniongif", description="Generates a random Minion GIF.")
-async def minion_gif(interaction: discord.Interaction):
-    gif_url = fetch_random_minion_gif()
-    if gif_url:
-        await interaction.response.send_message(gif_url)
-    else:
-        await interaction.response.send_message("Sorry, I couldn't fetch a Minion GIF at the moment. Please try again later.")
-
 
 
 
